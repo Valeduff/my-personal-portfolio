@@ -8,7 +8,8 @@ body {
   
   header {
     padding: 20px 0;
-    
+    display: flex;
+    justify-content: space-between;
   }
   
   header .row,
@@ -19,18 +20,20 @@ body {
   
   h1 {
     font-weight: 700;
-    margin: 0;
   }
   
   nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
   }
   
   a {
     padding: 0 20px;
     margin: 0;
     color: black;
+    text-decoration: none;
   }
   
   .jumbotron {
@@ -53,7 +56,9 @@ body {
     margin: 0 0 20px;
     color: #fff;
   }
-  
+  .banner{
+    margin-left: 2rem;
+  }
   section .row img {
     margin: 0 0 30px;
     width: 100%;
@@ -110,14 +115,19 @@ body {
   footer {
     font-size: 12px;
     padding: 20px 0;
-  }
-  
-  footer .col-sm-8 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-top: 2rem;
   }
-  
-  footer ul {
-    list-style: none;
+  .text-right {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10rem;
   }
-  
+  .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
