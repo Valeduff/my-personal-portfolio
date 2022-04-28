@@ -2,31 +2,32 @@
   box-sizing: border-box;
 }
 body {
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto Serif', serif;
     background-image: url('https://content.codecademy.com/courses/learn-css-selectors-visual-rules/hypnotize_bg.png');
   }
   
   header {
-    padding: 20px 0;
+    padding: 20px 20px;
     display: flex;
     justify-content: space-between;
   }
   
-  header .row,
-  footer .row {
+  header,
+  footer {
     display: flex;
     align-items: center;
+    margin-left: 2rem;
   }
   
   h1 {
     font-weight: 700;
+    
   }
   
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 1rem;
   }
   
   a {
@@ -34,9 +35,14 @@ body {
     margin: 0;
     color: black;
     text-decoration: none;
+    transition-property: font-size;
+    transition-duration: 350ms;
+  }
+  a:hover {
+    font-size: 18px;
   }
   
-  .jumbotron {
+  .banner{
     display: flex;
     align-items: center;
     background-image: url(https://i.ibb.co/HX4B1TZ/pexels-lisa-fotios-1083822.jpg);
@@ -44,22 +50,33 @@ body {
     color: #ffffff;
     height: 400px;
   }
-  
-  .jumbotron h2 {
+  .overlay {
+    content: " ";
+    z-index: 1;
+    position: absolute;   
+    height: 400px;
+    width: 98%;
+    background: rgba(0, 0, 0, 0.5);
+}
+  .banner h2 {
     font-size: 60px;
     font-weight: 700;
     margin: 0;
     color: #fff;
   }
   
-  .jumbotron h3 {
+  .banner h3 {
+    text-align: right;
     margin: 0 0 20px;
     color: #fff;
   }
-  .banner{
-    margin-left: 2rem;
+  .banner-text {
+    padding-left: 3rem;
+    width: 50%;
+    align-content: center;
+    padding-top: 150px;
   }
-  section .row img {
+  section img {
     margin: 0 0 30px;
     width: 100%;
   }
@@ -76,32 +93,7 @@ body {
   #quote{
       font-size: 0.85rem;
   }
-  .col-md-6 {
-    margin: 0 0 30px;
-  }
   
-  .btn.btn-primary {
-    border-radius: 2px;
-    border: 0px;
-    color: #fbd1d5;
-    background-color: #ffffff;
-  }
-  
-  .btn.btn-primary:hover {
-    color: #ffffff;
-    background-color: #fbd1d5;
-  }
-  
-  .btn-secondary {
-    background-color: #2a70e0;
-    color: #ffffff;
-    margin: 0 0 30px;
-  }
-  
-  .portrait {
-    width:  350px;
-    height: 300px;
-  }
   
   figure img {
     width: 100%;
@@ -115,19 +107,26 @@ body {
   footer {
     font-size: 12px;
     padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  .bottom {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    width: 90%;
   }
   .text-right {
     display: flex;
     justify-content: space-around;
-    margin-right: 10rem;
+    
   }
   .links {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    font-size: 14px;
+    padding: 0 40px;
   }
+
+  
